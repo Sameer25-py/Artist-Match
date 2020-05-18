@@ -11,7 +11,6 @@ from sklearn import svm
 from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import MultinomialNB
 import joblib
-import pickle
 import tensorflow as tf
 import keras
 from keras.models import Sequential
