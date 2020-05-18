@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Results-ArtistMatch</title>
+	</head>
+	<body>
+		<div class = "logo">
+		<img src="../static/logo.png">
+		</div>
+<table class = "center">
+  <tr>
+    <td class = "heading">Predictor</td>
+    <td class = "heading">Artist</td>
+  </tr>
+  	{% for artist in artists %}
+  	<tr>
+  	<td> {{artist.Model}} </td>
+  	<td> {{artist.Artist}} </td>
+  	</tr>
+  	{% endfor %}
+</table>
+  <div class="wrap">
+  <button class="about">
+       <a href="/about" class = "link"> About</a>
+  </button>
+  <button class="about">
+       <a href="/" class = "link"> Main</a>
+  </button>
+</div>
+
+
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<title>Home-ArtistMatch</title>
+
+</head>
+<body>
+	<div class = "logo">
+		<img src="../static/logo.png">
+	</div>
+	<form method="POST">
+	<div class="wrap">
+   <div class="search">
+      <input type="text" name= "text" class="searchTerm" placeholder="Enter Lyrics or Verse of Eminem,MGK,Kendrick or Geazy only">
+      </div>
+      <div>
+      <input type="submit" class="searchButton">
+	</div>
+		</div>
+	</form>
+	<div>
+     	 <button class="about">
+     	 <a href="/about" class = "link"> About</a>
+
+     	 </button>
+    </div>
+
+
+
+</body>
+</html>
