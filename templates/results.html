@@ -13,11 +13,13 @@
   <tr>
     <td class = "heading">Predictor</td>
     <td class = "heading">Artist</td>
+    <td class = "heading">Probabilty % </td>
   </tr>
   	{% for artist in artists %}
   	<tr>
   	<td> {{artist.Model}} </td>
   	<td> {{artist.Artist}} </td>
+    <td> {{artist.Proba}} </td>
   	</tr>
   	{% endfor %}
 </table>

@@ -126,20 +126,17 @@ class predictor:
 		predictions=[]
 		artist={0:"Eminem",1:"G-Eazy",2:"Kendrick Lamar",3:"Machine Gun Kelly"}
 		models=["Naive Bayes","Logistic Regression","Support Vector Machine"]
-		predictions.append(self.nb.predict(vec)[0])
-		predictions.append(self.lr.predict(vec)[0])
-		predictions.append(self.svm.predict(vec)[0])
+		predictions.append((self.nb.predict(vec)[0],self.nb.predict_proba(vec)))
+		predictions.append((self.lr.predict(vec)[0],self.lr.predict_proba(vec)))
+		predictions.append((self.svm.predict(vec)[0],0))
 		print(predictions)
 		results=[]
 		for index,i in enumerate(predictions):
 			results.append({
 				"Model":models[index],
-				"Artist":artist[i]
+				"Artist":artist[i[0]],
+				"Proba":i[1] 
 				})
-		results.append({
-			"Model":"Max Voting Ensemble",
-			"Artist":artist[stats.mode(predictions)]
-			})
 
 		return results
 		
